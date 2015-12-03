@@ -1,0 +1,9 @@
+/* CSS declarations go here */
+.field strong {
+	width: 150px;
+}
+
+textarea {
+	width: 300px;
+	height: 150px;
+}

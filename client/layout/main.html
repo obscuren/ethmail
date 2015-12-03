@@ -1,0 +1,19 @@
+<template name="main">
+	<h3>
+		Eth Mail:
+		<select class="account-select">
+			{{#each accounts}}
+				<option value="{{address}}">{{name}}</option>
+			{{/each}}
+		</select>
+	</h3>
+
+	<a href="/">Inbox</a>
+	<hr>
+
+	{{> Template.dynamic template=main data=data}}
+	{{! > yield }}
+
+	{{> GlobalNotifications}}
+</template>
+

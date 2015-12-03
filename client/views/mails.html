@@ -1,0 +1,20 @@
+<template name="mails">
+	<table>
+		<tr>
+			<th>From</th>
+			<th>Subject</th>
+		</tr>
+
+		{{#each mails}}
+			<tr class="mail" data-hash="{{hash}}">
+				<td>{{id}} &lt;{{from}}&gt;</td>
+				<td>{{subject}}</td>
+			</tr>
+		{{/each}}
+	</table>
+
+	<hr>
+
+	<h4>New mail</h4>
+	{{> new_mail}}
+</template>

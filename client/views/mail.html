@@ -1,0 +1,20 @@
+<template name="mail">
+
+	<div class="content">
+		<div class="field">
+			<strong>From: </strong>{{mail.to}}
+		</div>
+		<div class="field">
+			<strong>Subject: </strong>{{mail.subject}}
+		</div>
+		<div class="field">
+			<strong>Body:</strong>
+			<hr>
+			{{mail.body}}
+		</div>
+
+		<hr>
+		<div><strong>The content of this message is authentic</strong> and has been verified by the Ethereum blockchain.</div>
+	</div>
+
+</template>
