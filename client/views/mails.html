@@ -7,7 +7,7 @@
 
 		{{#each mails}}
 			<tr class="mail" data-hash="{{hash}}">
-				<td>{{id}} &lt;{{from}}&gt;</td>
+				<td>{{id}} {{lookup from}}</td>
 				<td>{{subject}}</td>
 			</tr>
 		{{/each}}

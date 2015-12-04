@@ -4,3 +4,8 @@ Template.mails.helpers({
 	},
 });
 
+Template.mails.events({
+	"click .mail": function(event) {
+		FlowRouter.go("/" + $(event.currentTarget).data("hash"));
+	},
+});

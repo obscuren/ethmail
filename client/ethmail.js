@@ -1,6 +1,7 @@
 var authContract = web3.eth.contract([{"constant":true,"inputs":[{"name":"signer","type":"address"},{"name":"recipient","type":"address"},{"name":"hash","type":"bytes32"}],"name":"hash","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"p","type":"address"},{"name":"hash","type":"bytes32"},{"name":"v","type":"uint8"},{"name":"r","type":"bytes32"},{"name":"s","type":"bytes32"}],"name":"verify","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[],"type":"constructor"}]);
 
-var address = "0xbd88dc6293d6c699c8fef8b892a17be597e98db5";
+//var address = "0xbd88dc6293d6c699c8fef8b892a17be597e98db5";
+var address = "0x5ab3390ce6518c970b5a435d01e00bcdc6431671";
 auth = authContract.at(address);
 
 function sign(signer, recipient, content) {

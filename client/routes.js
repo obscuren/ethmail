@@ -8,7 +8,7 @@ for(var i = 0; i < eth.accounts.length; i++) {
 		var content = "New mail: " + mail.subject;
 		GlobalNotification.info({
 			content: content, 
-			duration: 5,
+			duration: 7,
 			okText: "open",
 			ok: function() {
 				FlowRouter.go("mail", {hash: hash});

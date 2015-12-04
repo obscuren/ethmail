@@ -15,3 +15,7 @@ input {
 footer {
 	font-style: italic;
 }
+
+.pending {
+	color: #CCC;
+}
