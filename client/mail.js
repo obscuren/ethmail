@@ -2,8 +2,14 @@ var emptyAddress = "0x0000000000000000000000000000000000000000";
 
 Template.mail.helpers({
 	mail: function() {
-		console.log(Mails.findOne({hash: this.hash}));
 		return Mails.findOne({hash: this.hash});
+	},
+
+	avatar: function(mail) {
+		var url = web3.toUtf8(ethid.query(mail.from, "avatar"));
+		if(url.length > 0) {
+			return "<img src='"+url+"'>";
+		}
 	}
 });
 
@@ -13,9 +19,9 @@ Template.new_mail.events({
 
 	var to = event.target.to.value;
 	if( to.substr(0, 2) !== "0x" ) {
-		var domain = EtherID.getDomain(web3.toHex(to));
-		if( domain[0] !== emptyAddress ) {
-			to = domain[0];
+		var name = ethid.lookup(to)
+		if( name !== emptyAddress ) {
+			to = name 
 		}
 	}
 
